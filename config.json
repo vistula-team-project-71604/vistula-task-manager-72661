@@ -1,0 +1,5 @@
+{
+  "supabaseUrl": "https://tvdyszkbsztzlebcsgal.supabase.co/rest/v1/",
+  "supabasePublishableKey": "sb_publishable_n8IJwbwHwUgUpJM1-JuUVA_mAuy9fwS",
+  "tableName": "tasks"
+}
