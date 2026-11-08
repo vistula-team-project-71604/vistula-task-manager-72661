@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --background: #0b0d12;
+    --surface: #151821;
+    --surface-hover: #1c202b;
+    --border: #2b3040;
+    --text: #f4f5f8;
+    --muted: #9299aa;
+    --accent: #8b7cf6;
+    --accent-hover: #a296ff;
+    --success: #4adea0;
+    --danger: #fb7185;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 60px 24px;
+    background: var(--background);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+body > * {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin-bottom: 4px;
+}
+
+h1::before {
+    content: "✦";
+    color: var(--accent);
+    margin-right: 14px;
+}
+
+body > p:first-of-type {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+#student-id {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    margin-top: 36px;
+    margin-bottom: 18px;
+}
+
+#task-form {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+input {
+    width: 100%;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 15px 16px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input::placeholder {
+    color: #72798a;
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(139, 124, 246, 0.12);
+}
+
+button {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 9px;
+    padding: 11px 16px;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+#task-submit {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 14px;
+}
+
+#task-submit:hover {
+    background: var(--accent-hover);
+}
+
+#status-message {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 50px;
+}
+
+.task-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 24px;
+    transition: 0.2s;
+}
+
+.task-item:hover {
+    border-color: #454b60;
+    background: var(--surface-hover);
+}
+
+.task-title {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    letter-spacing: -0.3px;
+}
+
+.task-description {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 16px;
+}
+
+.task-status {
+    display: inline-block;
+    background: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 18px;
+}
+
+.task-item button {
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+
+.edit-task {
+    background: #292d3b;
+    color: #d6d9e4;
+    border: 1px solid #383d50;
+}
+
+.edit-task:hover {
+    background: #383d50;
+}
+
+.toggle-task {
+    background: rgba(74, 222, 160, 0.1);
+    color: var(--success);
+    border: 1px solid rgba(74, 222, 160, 0.2);
+}
+
+.toggle-task:hover {
+    background: rgba(74, 222, 160, 0.2);
+}
+
+.delete-task {
+    background: rgba(251, 113, 133, 0.08);
+    color: var(--danger);
+    border: 1px solid rgba(251, 113, 133, 0.2);
+}
+
+.delete-task:hover {
+    background: rgba(251, 113, 133, 0.18);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+#contribution-link {
+    display: block;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#contribution-link:hover {
+    color: var(--accent-hover);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 30px 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #task-form {
+        padding: 18px;
+    }
+
+    .task-item {
+        padding: 18px;
+    }
+
+    .task-item button {
+        margin-bottom: 10px;
+    }
+}
